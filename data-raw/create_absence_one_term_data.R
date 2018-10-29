@@ -2,6 +2,8 @@
 
 absence_one_term_data <- read.csv("./data-raw/absence_one_term_national_1718.csv")
 
-devtools::use_data(absence_one_term_data)
+names(absence_one_term_data)<- tolower(names(absence_one_term_data))
+
+devtools::use_data(absence_one_term_data,overwrite = TRUE)
 
 rm(absence_one_term_data)
